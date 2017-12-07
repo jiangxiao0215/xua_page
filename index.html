@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+		/*#corner-flash{z-index:10;overflow:hidden;position:absolute;top:0;right:0;width:100px;height:100px;display:none;}
+		#corner-flash .cont{position:absolute;top:0;right:0;width:100px;height:100px;}
+		.ie6 #corner-flash .cont{top:-1px;} 
+		#corner-flash .ad{top:45px;right:23px;z-index:-1;}
+*/
+		/*Browser.webkit && Browser.chrome > 24*/
+/*		#corner-flash .msg_block{
+			position:absolute;
+			right:0px;
+			top:0px;
+			z-index: 1; 
+			width: 100px;
+			height: 100px;
+			background: transparent;
+			transition:linear 0.35s;
+			-webkit-clip-path:polygon(50% 0%, 100% 0%, 100% 50%, 50% 0%);
+			-o-clip-path:polygon(50% 0%, 100% 0%, 100% 50%, 50% 0%);
+			clip-path: polygon(50% 0%, 100% 0%, 100% 50%, 50% 0%);
+		} 
+		#corner-flash .msg_block img {vertical-align:top;height:100%;width:100%;overflow:hidden;} 
+		#corner-flash .page{width: 100px;height: 100px;display: block; position: absolute;top: 0px;right: 0px;z-index: 3;} 
+		#corner-flash .corner-page{overflow: hidden;z-index: 4;right: 0px;width: 50px;position: absolute;top: 0px;height: 50px;border: none;transition:linear 0.35s;} 
+		#corner-flash .close{
+			display: block;
+			position: absolute;
+			left: 58px;
+			bottom: 60px;
+			width: 10px;
+			height: 10px;
+			background: url(https://p.ssl.qhimg.com/t01e27a16a5997731e3.png) no-repeat center;
+			z-index: 5;
+			transition:linear 0.35s;
+		} 
+		#corner-flash:hover .msg_block,#corner-flash .msg-block-hover{
+			-webkit-clip-path: polygon(15% 0%, 100% 0%, 100% 83%,15% 0%);
+			-o-clip-path:polygon(15% 0%, 100% 0%, 100% 83%,15% 0%);
+			clip-path: polygon(15% 0%, 100% 0%, 100% 83%,15% 0%);
+		} 
+		#corner-flash:hover .close,#corner-flash .close-hover{bottom: 33px;left: 28px;}
+		#corner-flash:hover .corner-page,#corner-flash .imgpage-hover{height: 82px;width: 86px;}*/
+		/**/
+
+
+		/*#corner-flash .msg_block{position:absolute;top:0;right:0;width: 100px;height: 100px;} 
+		#corner-flash .msg_block svg{display: block;position: absolute;top:0px;right: 0px;width: 50px;height: 50px;} 
+		#corner-flash .page{width: 100px;height: 100px;display: block; position: absolute;top: 0px;right: 0px;z-index: 3;} 
+		#corner-flash .page img{overflow: hidden;z-index: 4;right: 0px;width: 50px;position: absolute;top: 0px;height: 50px;border: none;} 
+		#corner-flash .close{
+			display: block;
+			position: absolute;
+			left: 57px;bottom: 60px;
+			width: 10px;height: 10px;
+			background: url(https://p.ssl.qhimg.com/t01e27a16a5997731e3.png) no-repeat center;z-index: 5;
+		}*/
+
+		#corner-flash{z-index:10;overflow:hidden;position:absolute;top:0;right:0;width:100px;height:100px;}
+		#corner-flash .cont{position:absolute;top:0;right:0;width:100px;height:100px;}
+		.ie6 #corner-flash .cont{top:-1px;} 
+		#corner-flash .ad{top:45px;right:23px;z-index:-1;}
+		#corner-flash .msg_block{right: 0px;overflow: hidden;width: 50px;position: absolute;top: 0px;height: 50px;z-index: 1;} 
+		#corner-flash .msg_block img{position: absolute;top: 0;right: 0;width: 100px;height: 100px;} 
+		#corner-flash .page{width: 50px;height: 50px;display: block; position: absolute;top: 0px;right: 0px;z-index: 3;} 
+		#corner-flash .page img{overflow: hidden;z-index: 99;right: 0px;width: 50px;position: absolute;top: 0px;height: 50px;border:none;} 
+		#corner-flash .close{display: block;position: absolute;left: 53px;bottom: 54px;width: 10px;height: 10px;background: url(https://p.ssl.qhimg.com/t01e27a16a5997731e3.png) no-repeat center;z-index: 5;} 
+		#corner-flash .ad{top:51px;right:28px;z-index:-1;}
+		#imgpage{
+			height:50px;width:50px;
+		}
+    </style>
+    <script src="./jquery.js"></script>
+</head>
+
+<body>
+
+	<!-- IE -->
+	<div class="behind-view" id="doc-bd-behind">
+		<div id="corner-flash">
+			<div class="cont">
+				<a title="天猫" class="page" href="">
+					<img class="corner-page" id="imgpage" alt="天猫" src="https://p.ssl.qhimg.com/t01e97b0138ab89c9a2.png">
+				</a>
+				<div class="msg_block">
+					<img src="https://s3m.mediav.com/galileo/92087037d921cc9e7ea32b76d94f1a71.png">
+				</div>
+					<a title="关闭" class="close" id="corner-flash-close" href="javascript:void(0)"></a>
+			</div>
+			<span class="ad"></span>
+		</div>
+	</div>
+
+
+	<!-- /*Browser.webkit && Browser.chrome > 24*/ -->
+<!--     <div class="behind-view" id="doc-bd-behind">
+        <div id="corner-flash" style="display: block;">
+            <div class="cont">
+            	<a href="" title="" class="page">
+            		<img src="https://p.ssl.qhimg.com/t0103b29f6b67b3794e.png" alt="" id="imgpage" class="corner-page">
+            	</a>
+                <div class="msg_block">
+                	<img src="https://s3m.mediav.com/galileo/92087037d921cc9e7ea32b76d94f1a71.png">
+                </div>
+                <a href="javascript:void(0)" title="关闭" class="close" id="corner-flash-close"></a>
+            </div>
+            <span class="ad"></span>
+        </div>
+    </div> -->
+
+
+
+<!--     <div class="behind-view" id="doc-bd-behind">
+    	<div id="corner-flash" style="display: block;">
+    		<div class="cont">
+    			<a title="" class="page" href="">
+    				<img class="corner-page" id="imgpage" style="width:50px; height:50px;" alt="" src="https://p.ssl.qhimg.com/t0103b29f6b67b3794e.png">
+    			</a>
+    			<div class="msg_block">
+	    			<svg xmlns="http://www.w3.org/2000/svg" id="adsSvg" style="width:50px; height:50px;">
+	    				<defs>
+	    					<pattern id="raduisImage" patternUnits="userSpaceOnUse" width="100" height="100">
+	    						<image id="adsImg" x="-50" y="0" width="100" height="100" src="https://s3m.mediav.com/galileo/92087037d921cc9e7ea32b76d94f1a71.png" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://s3m.mediav.com/galileo/92087037d921cc9e7ea32b76d94f1a71.png" />
+	    					</pattern>
+	    				</defs>
+	    				<polygon id="adsPolygon" fill="url(#raduisImage)" points="0,0 50,50 50,0" />
+	    			</svg> 
+    			</div>
+    			<a title="关闭" class="close" id="corner-flash-close" style="left:58px; bottom:60px;" href="javascript:void(0)"></a>
+    		</div>
+    		<span class="ad"></span>
+    	</div>
+    </div> -->
+
+    <script>
+    console.log(myexplorer())
+
+
+    $(".close").click(function(e) { 
+    	e.preventDefault();
+    	alert('close')
+    	
+    });
+
+
+var o = $(".msg_block"),
+    u = document.getElementById("imgpage"),
+    a = document.getElementById("adsSvg"),
+    f = document.getElementById("adsPolygon"),
+    l = document.getElementById("corner-flash-close"),
+    c = document.getElementById("adsImg"),
+    h;
+
+    var s = function(e, t) {
+        var n = 24,
+            r = Math.ceil(e * n / 1e3),
+            i = 0,
+            s = setInterval(function() { i++, i >= r && clearInterval(s), t(i / r) }, 1e3 / n);
+        return s;
+    };
+
+
+// IE 
+ $('#corner-flash').hover(function () {
+	$('#imgpage').stop().animate({ height: "82px", width: "82px" }, 350);
+	$(".msg_block").stop().animate({ height: "82px" , width:"82px" }, 350);
+	$('#corner-flash-close').stop().animate({ bottom: "24px" , left: "24px"}, 350);
+ },function () {
+ 	$('#imgpage').stop().animate({ height: "50px", width:"50px" }, 350), 
+	$(".msg_block").stop().animate({ height: "50px", width:"50px" }, 350), 
+	$('#corner-flash-close').stop().animate({ bottom: "54px", left:"53px"}, 350)
+ })
+
+// Browser.edge || !Browser.webkit
+// $('#corner-flash').hover(function () {
+// 	h && clearInterval(h);
+
+// 	h = s(350, function(e) {
+// 		var t = Math.ceil(50 + 33 * e);
+// 		u.setAttribute("style", "width:" + t + "px; height:" + t + "px;"), 
+//         a.setAttribute("style", "width:" + t + "px; height:" + t + "px;"), 
+//         f.setAttribute("points", "0,0 " + t + "," + t + " " + t + ",0"), 
+//         l.setAttribute("style", "left:" + (112 - t) + "px; bottom:" + (114 - t) + "px;"), 
+//         c.setAttribute("x", t - 100)
+// 	})
+// },function () {
+// 	h && clearInterval(h), 
+//     h = s(350, function(e) {
+//         var t = Math.ceil(80 + -33 * e) + 3;
+//         u.setAttribute("style", "width:" + t + "px; height:" + t + "px;"), 
+//         a.setAttribute("style", "width:" + t + "px; height:" + t + "px;"), 
+//         f.setAttribute("points", "0,0 " + t + "," + t + " " + t + ",0"), 
+//         l.setAttribute("style", "left:" + (108 - t) + "px; bottom:" + (110 - t) + "px;"), 
+//         c.setAttribute("x", t - 100)
+//     })
+// })
+
+// Browser.webkit && parseInt(Browser.chrome) > 24
+// $('#corner-flash').hover(function (){
+// 	$(o).addClass("msg-block-hover");
+// 	$(u).addClass("imgpage-hover");
+// 	$(l).addClass("close-hover");
+// },function () {
+// 	$(o).removeClass("msg-block-hover"); 
+// 	$(u).removeClass("imgpage-hover"); 
+// 	$(l).removeClass("close-hover");
+// })
+
+
+
+
+
+
+// Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 10.0; WOW64; Trident/7.0; .NET4.0C; .NET4.0E)
+// Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 10.0; WOW64; Trident/7.0; .NET4.0C; .NET4.0E)
+    // 浏览器版本
+    function myexplorer() {
+        var explorer = window.navigator.userAgent.toLowerCase();
+        if (explorer.match(/msie/) != null && explorer.match(/compatible/) || explorer.match(/trident/) != null ) {
+            browserVersion = explorer.match(/msie ([\d.]+)/) != null ? explorer.match(/msie ([\d.]+)/)[1] : explorer.match(/rv:([\d.]+)/)[1];
+            return myexplorer = "IE" + browserVersion;
+        } 
+        else if (explorer.indexOf("qqbrowser") >= 0 || explorer.indexOf("qq") >= 0 || explorer.indexOf("tencenttraveler") >= 0) { return myexplorer = "QQ"; } 
+        else if (explorer.indexOf("lbbrowser") >= 0) { return myexplorer = "猎豹"; } 
+        else if (explorer.indexOf("360ee") >= 0) { return myexplorer = "360极速"; } 
+        else if (explorer.indexOf("360se") >= 0) { return myexplorer = "360安全"; } 
+        else if (explorer.indexOf("metasr") >= 0) { return myexplorer = "搜狗"; } 
+        else if (explorer.indexOf("ubrowser") >= 0) { return myexplorer = "UC"; } 
+        else if (explorer.indexOf("aoyou") >= 0) { return myexplorer = "遨游"; } 
+        else if (explorer.indexOf("baidu") >= 0) { return myexplorer = "百度"; } 
+        else if (explorer.indexOf("firefox") >= 0) { return myexplorer = "火狐"; } 
+        else if (explorer.indexOf("maxthon") >= 0) { return myexplorer = "遨游"; } 
+        else if (explorer.indexOf("opera") >= 0) { return myexplorer = "欧朋"; } 
+        else if (explorer.indexOf("theworld") >= 0) { return myexplorer = "世界之窗"; } 
+        else if (explorer.indexOf('edge') >= 0) { return myexplorer = "EDGE"; } 
+        else if (explorer.indexOf("chrome") >= 0) {
+            var is360 = _mime("type", "application/vnd.chromium.remoting-viewer");
+            function _mime(option, value) {
+                var mimeTypes = navigator.mimeTypes;
+                for (var mt in mimeTypes) {
+                    if (mimeTypes[mt][option] == value) { return true; }
+                }
+                return false;
+            }
+            if (is360 || explorer.match(/360se/) != null) {
+                return myexplorer = '360';
+            } else {
+                return myexplorer = "谷歌";
+            }
+        } else if (explorer.indexOf("safari") >= 0) { return myexplorer = "苹果"; } else { return myexplorer = "其他"; }
+    }
+    </script>
+</body>
+
+</html>
